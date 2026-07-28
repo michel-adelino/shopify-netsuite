@@ -1,6 +1,6 @@
 # Shopify ↔ NetSuite Bridge
 
-> Open-source middleware scaffolding for syncing orders, inventory, and fulfillment between Shopify and Oracle NetSuite, built and maintained by [Avalux](https://avalux.io). Part of the [Avalux open-source toolkit](https://github.com/elikem2021/avalux-open-source).
+> Open-source middleware scaffolding for syncing orders, inventory, and fulfillment between Shopify and Oracle NetSuite, built and maintained by [Avalux](https://avalux.io). Part of the [Avalux open-source toolkit](https://github.com/avalux-io/avalux-open-source).
 
 ## Why this exists
 
@@ -84,7 +84,7 @@ shopify-netsuite-bridge/
 ## Quick start
 
 ```bash
-git clone https://github.com/elikem2021/shopify-netsuite-bridge.git
+git clone https://github.com/avalux-io/shopify-netsuite-bridge.git
 cd shopify-netsuite-bridge
 cp .env.example .env
 npm install
@@ -178,8 +178,8 @@ If you fork this and ship it yourself, we are happy that exists. If you want hel
 
 ## Avalux's other open source projects
 
-- [freight-eta-toolkit](https://github.com/elikem2021/freight-eta-toolkit): ETA prediction and geofenced arrival alerts for freight and last-mile
-- [avalux-open-source](https://github.com/elikem2021/avalux-open-source): index of all Avalux open-source repositories
+- [freight-eta-toolkit](https://github.com/avalux-io/freight-eta-toolkit): ETA prediction and geofenced arrival alerts for freight and last-mile
+- [avalux-open-source](https://github.com/avalux-io/avalux-open-source): index of all Avalux open-source repositories
 
 ## License
 
