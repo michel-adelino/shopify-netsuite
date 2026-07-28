@@ -1,6 +1,6 @@
 # Shopify ↔ NetSuite Bridge
 
-> Open-source middleware scaffolding for syncing orders, inventory, and fulfillment between Shopify and Oracle NetSuite, built and maintained by [Avalux](https://avalux.io). Part of the [Avalux open-source toolkit](https://github.com/avalux-io/avalux-open-source).
+> Open-source middleware scaffolding for syncing orders, inventory, and fulfillment between Shopify and Oracle NetSuite.
 
 ## Why this exists
 
@@ -8,7 +8,7 @@ Growth-stage e-commerce brands hit a predictable wall around the time monthly or
 
 Most integration vendors solve the easy 80% and charge per-order fees. The remaining 20% is where the actual accounting lives: multi-currency exchange-rate locking, deferred revenue handling for pre-orders, refund-to-credit-memo reconciliation, item fulfillment split across multiple NetSuite Locations from a single Shopify basket, and tax decomposition that survives a SOX audit.
 
-This repository is the scaffolding we use when we onboard a new client into a Shopify-to-NetSuite engagement. It is not a productized SaaS. It is an opinionated codebase you can fork, harden, and host yourself.
+This repository is scaffolding for a Shopify-to-NetSuite integration. It is not a productized SaaS. It is an opinionated codebase you can fork, harden, and host yourself.
 
 ## Who this is for
 
@@ -39,7 +39,7 @@ What is not in this repository:
 - Monitoring, alerting, and reconciliation dashboards
 - The integration record, role, employee, and saved searches inside your NetSuite tenant
 
-Standing up the real system on top of this scaffold is a multi-week engagement for a competent senior engineer who has touched both APIs before. We do this work professionally at [avalux.io](https://avalux.io). The code here is what we would build for you, minus the bits that are unique to your accounting policy.
+Standing up the real system on top of this scaffold is a multi-week effort for a competent senior engineer who has touched both APIs before. The code here covers the shared mapping and sync path, minus the bits that are unique to a given accounting policy.
 
 ## What's in the box
 
@@ -84,7 +84,7 @@ shopify-netsuite-bridge/
 ## Quick start
 
 ```bash
-git clone https://github.com/avalux-io/shopify-netsuite-bridge.git
+git clone https://github.com/<owner>/shopify-netsuite-bridge.git
 cd shopify-netsuite-bridge
 cp .env.example .env
 npm install
@@ -170,20 +170,9 @@ For OAuth 2.0, you need:
 
 For TBA, you need the four-tuple (account ID, consumer key, consumer secret, token ID, token secret). Token Based Authentication signs every request with the order-correct OAuth 1.0a header. The signing implementation in this repo follows the NetSuite spec, including the alphabetical parameter ordering that bites people the first time.
 
-## Why we built this
-
-Avalux runs custom automation engagements for SMB and growth-stage e-commerce operators. Every NetSuite-Shopify project we have shipped starts with the same scaffolding, and we got tired of rebuilding it from scratch on day one of each engagement. Open-sourcing it does two things: it raises the floor for clients who want to validate that we know what we are doing before they sign anything, and it gives the internal engineering teams at the brands we cannot serve (because we are busy or it is not a fit) a non-trivial head start.
-
-If you fork this and ship it yourself, we are happy that exists. If you want help with the NetSuite setup, the queue hardening, the reconciliation dashboard, or the on-call runbook for when the API rate-limits you at 2am, that is what we do at [avalux.io](https://avalux.io). Reach us through the contact form, with a paragraph on your order volume, your NetSuite edition (OneWorld vs. standard), and what is currently broken.
-
-## Avalux's other open source projects
-
-- [freight-eta-toolkit](https://github.com/avalux-io/freight-eta-toolkit): ETA prediction and geofenced arrival alerts for freight and last-mile
-- [avalux-open-source](https://github.com/avalux-io/avalux-open-source): index of all Avalux open-source repositories
-
 ## License
 
-MIT. See [LICENSE](LICENSE). Use it, fork it, sell services around it. We ask that you keep the attribution intact.
+MIT. See [LICENSE](LICENSE). Use it, fork it, and sell services around it.
 
 ## Keywords
 
